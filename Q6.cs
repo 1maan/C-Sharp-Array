@@ -13,11 +13,26 @@ internal class Program
             Console.Write("elements - {0} : ", count);
             array[count] = Convert.ToInt32(Console.ReadLine());
         }
-        Console.Write("The unique elements found in the array are : ");
-       
+        int we = 3;
+        for (int count = 0; count < array.Length; count++)
 
-        
-
-
+            for (int count2= count; count2 < array.Length; count2++)
+            {
+                if(we == 3) { 
+                if(array[0] != array[1] && array[0] != array[2])
+                    {
+                        Console.WriteLine("The unique elements found in the array are :" + array[count2]);
+                        we = 4;
+                        break;
+                    }
+                if (array[count] != array[count2])
+                {          
+                    Console.WriteLine("The unique elements found in the array are :"+ array[count2]);
+                        we = 4;
+                        break;
+                }
+            }
+        }
     }
 }
+
